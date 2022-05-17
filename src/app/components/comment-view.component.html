@@ -1,0 +1,11 @@
+<div>
+    <form [formGroup]="updateForm" >
+        <div>name:{{comment.displayName}}</div>
+        <div>name:{{comment.createdAt}}</div>
+        <div>name:{{comment.txt}}</div>
+        <button (click)="isClick=!isClick">edit</button>
+        <input *ngIf="isClick" value="שנה תגובה כאן" formControlName="comm"><button *ngIf="isClick" (click)="isClick=!isClick;update()">editNow</button>
+        <button (click)="delete()">delete</button>
+    </form>
+  
+</div>

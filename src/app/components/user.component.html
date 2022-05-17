@@ -1,0 +1,9 @@
+hello
+<div>
+    <ng-container *ngFor="let user of users$ | async">
+        <div>
+            {{user.displayName}}
+        </div>
+        </ng-container>
+</div>
+<comment-list></comment-list>

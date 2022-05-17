@@ -1,0 +1,12 @@
+<div *ngFor="let comm of comment">
+   
+ 
+      <div *ngFor="let com of comm?.comments;let indexOfelement=index" [ngClass]="{'firsComm' : indexOfelement===0}"> 
+        
+     <div *ngIf="com">  
+        {{this.setval(com)}}
+        <view-comment (DeleteEvent)="delete(com)" (UpdateEvent)="update($event)" [data]="comIn"></view-comment>
+    </div>
+    <br>
+</div>  
+</div>
